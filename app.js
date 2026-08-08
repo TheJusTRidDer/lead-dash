@@ -10,11 +10,11 @@
   };
 
   const SEGMENTS = [
-    ["relevance", "Relevance", "#1d8fa0"],
-    ["magnitude", "Magnitude", "#0f5f74"],
-    ["urgency", "Urgency", "#e8b64c"],
-    ["evidence", "Evidence", "#4fb3a8"],
-    ["access", "Access", "#7cc8d6"],
+    { key: "relevance", label: "Relevance", color: "#1d8fa0" },
+    { key: "magnitude", label: "Magnitude", color: "#0f5f74" },
+    { key: "urgency", label: "Urgency", color: "#e8b64c" },
+    { key: "evidence", label: "Evidence", color: "#4fb3a8" },
+    { key: "access", label: "Access", color: "#7cc8d6" },
   ];
 
   function metrics() {
@@ -81,7 +81,7 @@
         segs += '<rect x="' + x + '" y="' + y + '" width="' + barW + '" height="' + (h - 1.5) + '" rx="2" fill="' + s.color + '"><title>' + r.company + " · " + s.label + " " + v + "</title></rect>";
       });
       const rank = '<text x="' + (x + barW / 2) + '" y="' + (mT + ch - (r.score / maxScore) * ch - 9) + '" text-anchor="middle" font-size="11" font-weight="800" fill="' + (r.score >= 80 ? "#e8b64c" : "#e7efef") + '">' + r.score + "</text>";
-      const label = r.company.length > 18 ? r.company.slice(0, 17) + "…" : r.company;
+      const label = r.company.length > 13 ? r.company.slice(0, 12) + "…" : r.company;
       rows += segs + rank +
         '<text x="' + (x + barW / 2) + '" y="' + (H - mB + 18) + '" text-anchor="middle" font-size="11" fill="#9ab3b5">' + label + "</text>";
     });
@@ -120,7 +120,6 @@
           "<td style='color:#7c9094'>" + (i + 1) + "</td>" +
           "<td class='co'><strong>" + r.company + "</strong>" +
           (r.watchlist ? " <span class='tag tag-watch'>Watch</span>" : "") +
-          "<span class='sub'>" + r.industry + "</span></td>" +
           "<td>" + r.city + "</td>" +
           "<td>" + r.industry + "</td>" +
           "<td class='date'>" + fmtDate(r.latest_signal) + "</td>" +
@@ -130,7 +129,6 @@
           "<td>" + r.opportunity + "</td>";
         tb.appendChild(tr);
       });
-      void t;
     }
 
     search.addEventListener("input", render);
