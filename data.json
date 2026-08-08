@@ -1,0 +1,849 @@
+{
+ "metrics": {
+  "companies": 22,
+  "with_signal": 19,
+  "watchlist": 3,
+  "ready": 10,
+  "monitor": 8,
+  "verify_first": 1,
+  "named_contacts": 8,
+  "top_score": 94,
+  "avg_score": 60.0,
+  "signals": 21,
+  "cities": 10,
+  "generated": "2026-08-08"
+ },
+ "companies": [
+  {
+   "ID": "001",
+   "Company": "SRM Casablanca-Settat",
+   "City": "Casablanca (region)",
+   "Industry": "Water/Electricity/Sanitation - regional utility",
+   "Website": "",
+   "Watchlist": ""
+  },
+  {
+   "ID": "002",
+   "Company": "CIH Bank",
+   "City": "Casablanca",
+   "Industry": "Banking / Finance",
+   "Website": "https://www.cihbank.ma",
+   "Watchlist": ""
+  },
+  {
+   "ID": "003",
+   "Company": "Management Solutions",
+   "City": "Casablanca",
+   "Industry": "Consulting (IT / risk)",
+   "Website": "https://www.managementsolutions.com",
+   "Watchlist": ""
+  },
+  {
+   "ID": "004",
+   "Company": "Magma Technology",
+   "City": "Casablanca",
+   "Industry": "Supply-chain tech startup",
+   "Website": "https://magmatechnology.io",
+   "Watchlist": ""
+  },
+  {
+   "ID": "005",
+   "Company": "LEAR Corporation (Tangier plant)",
+   "City": "Tangier",
+   "Industry": "Automotive manufacturing",
+   "Website": "https://www.lear.com",
+   "Watchlist": ""
+  },
+  {
+   "ID": "006",
+   "Company": "Ingin Intelligent Morocco",
+   "City": "Tangier Tech",
+   "Industry": "Automotive electronics",
+   "Website": "",
+   "Watchlist": ""
+  },
+  {
+   "ID": "007",
+   "Company": "Safran (Morocco operations)",
+   "City": "Casablanca / Midparc",
+   "Industry": "Aerospace",
+   "Website": "https://www.safran-group.com",
+   "Watchlist": ""
+  },
+  {
+   "ID": "008",
+   "Company": "Intelcia",
+   "City": "Casablanca",
+   "Industry": "BPO / Offshoring",
+   "Website": "https://www.intelcia.com",
+   "Watchlist": "yes"
+  },
+  {
+   "ID": "009",
+   "Company": "Chari",
+   "City": "Casablanca",
+   "Industry": "E-commerce startup",
+   "Website": "https://www.chari.ma",
+   "Watchlist": "yes"
+  },
+  {
+   "ID": "010",
+   "Company": "Al Omrane",
+   "City": "Rabat",
+   "Industry": "Public real-estate developer",
+   "Website": "https://www.alomrane.gov.ma",
+   "Watchlist": "yes"
+  },
+  {
+   "ID": "011",
+   "Company": "TELUS Digital Morocco",
+   "City": "Casablanca",
+   "Industry": "BPO / CX & AI services",
+   "Website": "https://www.telusdigital.com",
+   "Watchlist": ""
+  },
+  {
+   "ID": "012",
+   "Company": "SFC Automotive",
+   "City": "Tangier",
+   "Industry": "Automotive manufacturing",
+   "Website": "https://www.sfc-solutions.com",
+   "Watchlist": ""
+  },
+  {
+   "ID": "013",
+   "Company": "Sofrecom Maroc",
+   "City": "Casablanca",
+   "Industry": "IT / digital services (Orange group)",
+   "Website": "https://www.sofrecom.com",
+   "Watchlist": ""
+  },
+  {
+   "ID": "014",
+   "Company": "Salam Gaz",
+   "City": "Casablanca",
+   "Industry": "Energy (LPG distribution)",
+   "Website": "http://www.salamgaz.ma",
+   "Watchlist": ""
+  },
+  {
+   "ID": "015",
+   "Company": "Ryanair (Rabat base)",
+   "City": "Rabat",
+   "Industry": "Aviation",
+   "Website": "https://www.ryanair.com",
+   "Watchlist": ""
+  },
+  {
+   "ID": "016",
+   "Company": "Benteler (Morocco)",
+   "City": "Kenitra",
+   "Industry": "Automotive manufacturing",
+   "Website": "https://www.benteler.com",
+   "Watchlist": ""
+  },
+  {
+   "ID": "017",
+   "Company": "La Voie Express",
+   "City": "Berrechid",
+   "Industry": "Logistics",
+   "Website": "https://lavoieexpress.com",
+   "Watchlist": ""
+  },
+  {
+   "ID": "018",
+   "Company": "RMA Assurance",
+   "City": "Marrakech",
+   "Industry": "Insurance",
+   "Website": "https://www.rmaassurance.com",
+   "Watchlist": ""
+  },
+  {
+   "ID": "019",
+   "Company": "ORA Technologies",
+   "City": "Casablanca",
+   "Industry": "Fintech / super-app",
+   "Website": "https://ora.ma",
+   "Watchlist": ""
+  },
+  {
+   "ID": "020",
+   "Company": "Aage Hempel",
+   "City": "Casablanca",
+   "Industry": "Electronics / maritime services",
+   "Website": "https://www.aagehempel.com",
+   "Watchlist": ""
+  },
+  {
+   "ID": "021",
+   "Company": "Agenz",
+   "City": "Casablanca",
+   "Industry": "Proptech startup",
+   "Website": "https://www.agenz.ma",
+   "Watchlist": ""
+  },
+  {
+   "ID": "022",
+   "Company": "Al Barid Bank",
+   "City": "National network",
+   "Industry": "Banking",
+   "Website": "https://www.albaridbank.ma",
+   "Watchlist": ""
+  }
+ ],
+ "signals": [
+  {
+   "Company": "SRM Casablanca-Settat",
+   "Signal": "2026 recruitment plan: 1,000+ new profiles (600 hired in 2025); new customer agency at Ouled Saleh-Bouskoura + new HQ for Nouaceur provincial directorate",
+   "Date": "2026-03-10",
+   "Evidence": "https://fr.le360.ma/economie/recrutement-la-srm-casablanca-settat-ouvre-1000-opportunites-demploi-en-2026_JW6D3M5OJRBA3H4WVPFSU35DTY/"
+  },
+  {
+   "Company": "SRM Casablanca-Settat",
+   "Signal": "New customer agency opened at Lahraouiyine (proximity network expansion)",
+   "Date": "2026-07-11",
+   "Evidence": "https://laquotidienne.ma/web-tv-details/srm-casa-settat-lahraouiyine"
+  },
+  {
+   "Company": "CIH Bank",
+   "Signal": "Launched call for expressions of interest (AMI) for design & construction of future HQ at Casablanca Finance City (~$82.5M reported)",
+   "Date": "2026-07-06",
+   "Evidence": "https://medias24.com/2026/07/06/cih-bank-prepare-la-construction-de-son-futur-siege-a-casablanca-finance-city-1716901/"
+  },
+  {
+   "Company": "Management Solutions",
+   "Signal": "Opened new office at CFC First Tower, Casablanca Finance City (African strategic hub)",
+   "Date": "",
+   "Evidence": "https://www.managementsolutions.com/en/publications-and-events/events/other-events/opening-our-new-office-casablanca"
+  },
+  {
+   "Company": "Magma Technology",
+   "Signal": "Opened new Casablanca office (after Paris & Frankfurt); selected for Morocco 300 program; EUR 2M+ revenue",
+   "Date": "2026-04-09",
+   "Evidence": "https://ecoactu.ma/magma-technology-s-implante-au-maroc/"
+  },
+  {
+   "Company": "LEAR Corporation (Tangier plant)",
+   "Signal": "Extension of industrial unit at Tangier Automotive City: +8,000 m2 production surface",
+   "Date": "",
+   "Evidence": "https://www.tangermed.ma/en/new-expansion-within-the-industrial-platform-lear-expands-its-production-facilities/"
+  },
+  {
+   "Company": "Ingin Intelligent Morocco",
+   "Signal": "First overseas manufacturing plant announced at Mohammed VI Tangier Tech City (electric smart trunk systems)",
+   "Date": "2026-02-09",
+   "Evidence": "https://en.industries.ma/chinese-group-ingin-invests-in-morocco-plans-electric-trunk-plant-in-tangier-tech/"
+  },
+  {
+   "Company": "Safran (Morocco operations)",
+   "Signal": "Deepening industrial presence in Morocco - aeronautics leader expansion (Le Point)",
+   "Date": "2026-03-05",
+   "Evidence": "https://www.moroccoworldnews.com/2026/03/281705/le-point-calls-morocco-africas-aeronautics-leader-as-safran-expands-further/"
+  },
+  {
+   "Company": "TELUS Digital Morocco",
+   "Signal": "Opened new 11,136 m2 office at Casablanca Finance City (2 buildings) - capacity 1,700+ employees; total Morocco workforce ~2,900; includes workspaces, meeting rooms, training areas, auditorium",
+   "Date": "2026-06-19",
+   "Evidence": "https://en.7news.ma/telus-digital-opens-new-casablanca-office-as-morocco-workforce-grows-to-nearly-2900/"
+  },
+  {
+   "Company": "SFC Automotive",
+   "Signal": "Opened new 6-hectare industrial site at Tanger Med - 900 direct jobs",
+   "Date": "2026-05-07",
+   "Evidence": "https://medias24.com/2026/05/07/sfc-automotive-solutions-ouvre-un-nouveau-site-a-tanger-med-1672757/"
+  },
+  {
+   "Company": "Sofrecom Maroc",
+   "Signal": "Major expansion of digital service center in Morocco - creating 400 highly qualified jobs",
+   "Date": "2026-06-08",
+   "Evidence": "https://www.sofrecom.com/news-insights/sofrecom-poursuit-son-developpement-au-maroc.html"
+  },
+  {
+   "Company": "Salam Gaz",
+   "Signal": "New 3-level HQ (792 m2) on Bd Ghandi to house admin/management - MAD 120M investment",
+   "Date": "2026-06-15",
+   "Evidence": "https://www.challenge.ma/salam-gaz-soffre-un-nouveau-siege-a-120-millions-de-dh-321222/"
+  },
+  {
+   "Company": "Ryanair (Rabat base)",
+   "Signal": "New base at Rabat-Sale Airport - 2 aircraft stationed, 800 jobs (article Apr 2026)",
+   "Date": "2026-04-01",
+   "Evidence": "https://www.moroccoworldnews.com/2026/04/285703/ryanair-launches-valencia-rabat-route-as-part-of-broader-morocco-expansion/"
+  },
+  {
+   "Company": "Benteler (Morocco)",
+   "Signal": "Inaugurated new automotive plant at Atlantic Free Zone (Kenitra) - creating 300+ jobs",
+   "Date": "2026-07-01",
+   "Evidence": "https://www.moroccoworldnews.com/2026/07/326592/benteler-opens-new-automotive-plant-in-kenitra-creating-over-300-jobs/"
+  },
+  {
+   "Company": "La Voie Express",
+   "Signal": "Inaugurated Lakhyayta II Hub - 56,000 m2 logistics platform, +70,000 pallet spaces",
+   "Date": "2026-02-05",
+   "Evidence": "https://en.expresstv.ma/2026/02/qiyouh-inaugurates-the-lakhyayta-ii-hub-platform-to-enhance-the-logistics-infrastructure-in-casablanca-settat/"
+  },
+  {
+   "Company": "RMA Assurance",
+   "Signal": "Opened new RMA Services customer center in Marrakech (proximity network)",
+   "Date": "2026-06-09",
+   "Evidence": "https://www.212assurances.com/2026/06/09/rma-renforce-sa-proximite-client-avec-louverture-dun-centre-rma-services-a-marrakech/"
+  },
+  {
+   "Company": "ORA Technologies",
+   "Signal": "Raised $10M Series A - expanding KOUL delivery + digital wallet across Morocco",
+   "Date": "2026-07-22",
+   "Evidence": "https://disruptafrica.com/2026/07/22/moroccan-super-app-ora-technologies-tops-up-series-a-to-10m/"
+  },
+  {
+   "Company": "Aage Hempel",
+   "Signal": "Inaugurated new offices in Casablanca (maritime services expansion)",
+   "Date": "2026-01-26",
+   "Evidence": "https://maritimenews.ma/portuaire-2/14767-aage-hempel-group-inaugure-ses-nouveaux-bureaux-a-casablanca"
+  },
+  {
+   "Company": "Agenz",
+   "Signal": "Raised $5M oversubscribed seed round for national proptech expansion",
+   "Date": "2026-06-01",
+   "Evidence": "https://www.wamda.com/index.php/en/2026/06/moroccan-proptech-startup-agenz-raises-5-million-oversubscribed-seed-round"
+  },
+  {
+   "Company": "Al Barid Bank",
+   "Signal": "Opened 7 new branches in 2025 - network now 950 (largest in Morocco)",
+   "Date": "2026-07-01",
+   "Evidence": "https://en.7news.ma/moroccan-banks-close-more-branches-as-customers-move-online/"
+  },
+  {
+   "Company": "CIH Bank",
+   "Signal": "Opened 13 new branches in 2025 without closures - network grew to 346 (Bank Al-Maghrib census)",
+   "Date": "2026-07-01",
+   "Evidence": "https://en.7news.ma/moroccan-banks-close-more-branches-as-customers-move-online/"
+  }
+ ],
+ "opportunities": [
+  {
+   "company": "SRM Casablanca-Settat",
+   "opportunity": "Workstations & fit-out for 1,000 new hires + new provincial HQ (Nouaceur) and new customer agencies",
+   "why": "1,000 new staff + new offices/agencies inaugurated (2026)",
+   "score": 94,
+   "relevance": 32,
+   "magnitude": 25,
+   "urgency": 20,
+   "evidence": 10,
+   "access": 7,
+   "city": "Casablanca (region)",
+   "industry": "Water/Electricity/Sanitation - regional utility",
+   "watchlist": "",
+   "latest_signal": "2026-07-11"
+  },
+  {
+   "company": "CIH Bank",
+   "opportunity": "Future HQ at Casablanca Finance City: full office fit-out (desks, exec offices, meeting rooms, reception) + branch network needs",
+   "why": "New HQ project at CFC launched (Jul 2026)",
+   "score": 89,
+   "relevance": 35,
+   "magnitude": 25,
+   "urgency": 15,
+   "evidence": 10,
+   "access": 4,
+   "city": "Casablanca",
+   "industry": "Banking / Finance",
+   "watchlist": "",
+   "latest_signal": "2026-07-06"
+  },
+  {
+   "company": "TELUS Digital Morocco",
+   "opportunity": "1,700-seat office fit-out at CFC (11,136 m2, 2 buildings): workstations, meeting rooms, training areas, auditorium",
+   "why": "New CFC office opened (Jun 2026), 1,700 capacity",
+   "score": 89,
+   "relevance": 35,
+   "magnitude": 25,
+   "urgency": 15,
+   "evidence": 7,
+   "access": 7,
+   "city": "Casablanca",
+   "industry": "BPO / CX & AI services",
+   "watchlist": "",
+   "latest_signal": "2026-06-19"
+  },
+  {
+   "company": "Sofrecom Maroc",
+   "opportunity": "Workstations & fit-out for 400 new qualified hires (service center expansion)",
+   "why": "Service center expansion (Jun 2026), 400 jobs",
+   "score": 81,
+   "relevance": 32,
+   "magnitude": 20,
+   "urgency": 15,
+   "evidence": 10,
+   "access": 4,
+   "city": "Casablanca",
+   "industry": "IT / digital services (Orange group)",
+   "watchlist": "",
+   "latest_signal": "2026-06-08"
+  },
+  {
+   "company": "Salam Gaz",
+   "opportunity": "New 3-level HQ (792 m2): executive + admin fit-out",
+   "why": "New HQ, MAD 120M (Jun 2026)",
+   "score": 72,
+   "relevance": 35,
+   "magnitude": 8,
+   "urgency": 15,
+   "evidence": 10,
+   "access": 4,
+   "city": "Casablanca",
+   "industry": "Energy (LPG distribution)",
+   "watchlist": "",
+   "latest_signal": "2026-06-15"
+  },
+  {
+   "company": "Benteler (Morocco)",
+   "opportunity": "Office/admin areas for new Kenitra plant (300+ jobs)",
+   "why": "New Kenitra plant (Jul 2026), 300+ jobs",
+   "score": 69,
+   "relevance": 28,
+   "magnitude": 15,
+   "urgency": 15,
+   "evidence": 7,
+   "access": 4,
+   "city": "Kenitra",
+   "industry": "Automotive manufacturing",
+   "watchlist": "",
+   "latest_signal": "2026-07-01"
+  },
+  {
+   "company": "Magma Technology",
+   "opportunity": "New Casablanca office fit-out: workstations for growing team (10-20 seats, modular)",
+   "why": "New Casablanca office opened (Apr 2026)",
+   "score": 67,
+   "relevance": 35,
+   "magnitude": 8,
+   "urgency": 10,
+   "evidence": 7,
+   "access": 7,
+   "city": "Casablanca",
+   "industry": "Supply-chain tech startup",
+   "watchlist": "",
+   "latest_signal": "2026-04-09"
+  },
+  {
+   "company": "SFC Automotive",
+   "opportunity": "Admin/office areas for new Tanger Med industrial site (900 jobs)",
+   "why": "New Tanger Med site (May 2026), 900 jobs",
+   "score": 67,
+   "relevance": 28,
+   "magnitude": 15,
+   "urgency": 10,
+   "evidence": 10,
+   "access": 4,
+   "city": "Tangier",
+   "industry": "Automotive manufacturing",
+   "watchlist": "",
+   "latest_signal": "2026-05-07"
+  },
+  {
+   "company": "Management Solutions",
+   "opportunity": "New consulting office at CFC First Tower: workstations, meeting & collaboration areas",
+   "why": "New office opened at CFC First Tower",
+   "score": 66,
+   "relevance": 35,
+   "magnitude": 15,
+   "urgency": 5,
+   "evidence": 7,
+   "access": 4,
+   "city": "Casablanca",
+   "industry": "Consulting (IT / risk)",
+   "watchlist": "",
+   "latest_signal": ""
+  },
+  {
+   "company": "RMA Assurance",
+   "opportunity": "Fit-out for new RMA Services center (Marrakech)",
+   "why": "New RMA Services center (Jun 2026)",
+   "score": 66,
+   "relevance": 32,
+   "magnitude": 8,
+   "urgency": 15,
+   "evidence": 7,
+   "access": 4,
+   "city": "Marrakech",
+   "industry": "Insurance",
+   "watchlist": "",
+   "latest_signal": "2026-06-09"
+  },
+  {
+   "company": "Al Barid Bank",
+   "opportunity": "Branch furniture for 7 new branches (network 950)",
+   "why": "7 new branches (2025 figures, published Jul 2026)",
+   "score": 66,
+   "relevance": 32,
+   "magnitude": 8,
+   "urgency": 15,
+   "evidence": 7,
+   "access": 4,
+   "city": "National network",
+   "industry": "Banking",
+   "watchlist": "",
+   "latest_signal": "2026-07-01"
+  },
+  {
+   "company": "Ryanair (Rabat base)",
+   "opportunity": "Base offices at Rabat-Sale Airport (ops, admin, crew rooms)",
+   "why": "Rabat-Sale base (2026), 800 jobs",
+   "score": 61,
+   "relevance": 25,
+   "magnitude": 15,
+   "urgency": 10,
+   "evidence": 7,
+   "access": 4,
+   "city": "Rabat",
+   "industry": "Aviation",
+   "watchlist": "",
+   "latest_signal": "2026-04-01"
+  },
+  {
+   "company": "LEAR Corporation (Tangier plant)",
+   "opportunity": "Admin/office areas for +8,000 m2 plant extension (offices, break rooms, meeting rooms)",
+   "why": "8,000 m2 extension under way at Tangier Automotive City",
+   "score": 59,
+   "relevance": 28,
+   "magnitude": 15,
+   "urgency": 5,
+   "evidence": 7,
+   "access": 4,
+   "city": "Tangier",
+   "industry": "Automotive manufacturing",
+   "watchlist": "",
+   "latest_signal": ""
+  },
+  {
+   "company": "La Voie Express",
+   "opportunity": "Admin offices for Lakhyayta II Hub (56,000 m2 platform)",
+   "why": "Lakhyayta II Hub inaugurated (Feb 2026)",
+   "score": 59,
+   "relevance": 25,
+   "magnitude": 15,
+   "urgency": 5,
+   "evidence": 7,
+   "access": 7,
+   "city": "Berrechid",
+   "industry": "Logistics",
+   "watchlist": "",
+   "latest_signal": "2026-02-05"
+  },
+  {
+   "company": "Aage Hempel",
+   "opportunity": "New Casablanca offices - fit-out (verify current status)",
+   "why": "New offices (Jan 2026)",
+   "score": 59,
+   "relevance": 35,
+   "magnitude": 8,
+   "urgency": 5,
+   "evidence": 7,
+   "access": 4,
+   "city": "Casablanca",
+   "industry": "Electronics / maritime services",
+   "watchlist": "",
+   "latest_signal": "2026-01-26"
+  },
+  {
+   "company": "Ingin Intelligent Morocco",
+   "opportunity": "New Tangier Tech plant: admin offices + facility fit-out (fit-out stage in 2027)",
+   "why": "First overseas plant announced (Feb 2026)",
+   "score": 57,
+   "relevance": 28,
+   "magnitude": 8,
+   "urgency": 10,
+   "evidence": 7,
+   "access": 4,
+   "city": "Tangier Tech",
+   "industry": "Automotive electronics",
+   "watchlist": "",
+   "latest_signal": "2026-02-09"
+  },
+  {
+   "company": "Safran (Morocco operations)",
+   "opportunity": "Facility expansion: office/technical areas (specifics TBD)",
+   "why": "Expansion in Morocco (Mar 2026)",
+   "score": 57,
+   "relevance": 28,
+   "magnitude": 8,
+   "urgency": 10,
+   "evidence": 7,
+   "access": 4,
+   "city": "Casablanca / Midparc",
+   "industry": "Aerospace",
+   "watchlist": "",
+   "latest_signal": "2026-03-05"
+  },
+  {
+   "company": "ORA Technologies",
+   "opportunity": "Expansion offices if hiring follows $10M Series A",
+   "why": "Series A $10M (Jul 2026)",
+   "score": 51,
+   "relevance": 12,
+   "magnitude": 8,
+   "urgency": 20,
+   "evidence": 7,
+   "access": 4,
+   "city": "Casablanca",
+   "industry": "Fintech / super-app",
+   "watchlist": "",
+   "latest_signal": "2026-07-22"
+  },
+  {
+   "company": "Agenz",
+   "opportunity": "Small office needs if team grows after $5M seed",
+   "why": "Seed $5M (Jun 2026)",
+   "score": 46,
+   "relevance": 12,
+   "magnitude": 8,
+   "urgency": 15,
+   "evidence": 7,
+   "access": 4,
+   "city": "Casablanca",
+   "industry": "Proptech startup",
+   "watchlist": "",
+   "latest_signal": "2026-06-01"
+  },
+  {
+   "company": "Intelcia",
+   "opportunity": "No signal this scan - watchlist",
+   "why": "Watchlist - no signal",
+   "score": 15,
+   "relevance": 5,
+   "magnitude": 3,
+   "urgency": 5,
+   "evidence": 1,
+   "access": 1,
+   "city": "Casablanca",
+   "industry": "BPO / Offshoring",
+   "watchlist": "yes",
+   "latest_signal": ""
+  },
+  {
+   "company": "Chari",
+   "opportunity": "No signal this scan - watchlist",
+   "why": "Watchlist - no signal",
+   "score": 15,
+   "relevance": 5,
+   "magnitude": 3,
+   "urgency": 5,
+   "evidence": 1,
+   "access": 1,
+   "city": "Casablanca",
+   "industry": "E-commerce startup",
+   "watchlist": "yes",
+   "latest_signal": ""
+  },
+  {
+   "company": "Al Omrane",
+   "opportunity": "No signal this scan - watchlist",
+   "why": "Watchlist - no signal",
+   "score": 15,
+   "relevance": 5,
+   "magnitude": 3,
+   "urgency": 5,
+   "evidence": 1,
+   "access": 1,
+   "city": "Rabat",
+   "industry": "Public real-estate developer",
+   "watchlist": "yes",
+   "latest_signal": ""
+  }
+ ],
+ "contacts": [
+  {
+   "Company": "SRM Casablanca-Settat",
+   "Person": "Bouchra Nhaili",
+   "Position": "Human Capital Director",
+   "Source": "le360 article quote (2026-03-10); LinkedIn public",
+   "Email": "ou049@gmail.com (personal Gmail found on public LinkedIn activity - verify before use)"
+  },
+  {
+   "Company": "SRM Casablanca-Settat",
+   "Person": "Youssef El Bari",
+   "Position": "Directeur General (DG)",
+   "Source": "challenge.ma coverage",
+   "Email": "TBD - LinkedIn research"
+  },
+  {
+   "Company": "CIH Bank",
+   "Person": "Lotfi Sekkat",
+   "Position": "President & CEO",
+   "Source": "cihbank.ma contact page",
+   "Email": "+212 522 479 479 (head office switchboard)"
+  },
+  {
+   "Company": "CIH Bank",
+   "Person": "Faycal Gouy",
+   "Position": "DGA Support (facilities / general services)",
+   "Source": "ZoomInfo + LinkedIn public",
+   "Email": "TBD - LinkedIn research"
+  },
+  {
+   "Company": "Management Solutions",
+   "Person": "TBD",
+   "Position": "Managing Director Morocco",
+   "Source": "company announcement",
+   "Email": "TBD - LinkedIn research"
+  },
+  {
+   "Company": "Magma Technology",
+   "Person": "Mourad El Bidaoui",
+   "Position": "President & Co-founder",
+   "Source": "ecoactu interview (2026-04-09); LinkedIn public",
+   "Email": "LinkedIn: linkedin.com/in/mouradelbidaoui"
+  },
+  {
+   "Company": "LEAR Corporation (Tangier plant)",
+   "Person": "Faical Derkaoui",
+   "Position": "Plant Manager (Tangier)",
+   "Source": "event registry (scribd)",
+   "Email": "TBD - LinkedIn research"
+  },
+  {
+   "Company": "Ingin Intelligent Morocco",
+   "Person": "TBD",
+   "Position": "Country Manager (Morocco)",
+   "Source": "role inferred",
+   "Email": "TBD - LinkedIn research"
+  },
+  {
+   "Company": "Safran (Morocco operations)",
+   "Person": "TBD",
+   "Position": "Country / Site Director",
+   "Source": "role inferred",
+   "Email": "TBD - LinkedIn research"
+  },
+  {
+   "Company": "TELUS Digital Morocco",
+   "Person": "Yassine Benkirane",
+   "Position": "Country Managing Director & Operations Director",
+   "Source": "7news article quote (2026-06-19)",
+   "Email": "TBD - LinkedIn research"
+  },
+  {
+   "Company": "La Voie Express",
+   "Person": "Munsef Belkhayat",
+   "Position": "CEO",
+   "Source": "expresstv article quote (2026-02-05)",
+   "Email": "TBD - LinkedIn research"
+  }
+ ],
+ "outreach": [
+  {
+   "Company": "SRM Casablanca-Settat",
+   "Contact": "Youssef El Bari (DG) / Bouchra Nhaili",
+   "Status": "Ready to contact",
+   "Recommended action": "Email DG or HR Director w/ workstation & agency fit-out options; monitor public tenders (BOAMP)"
+  },
+  {
+   "Company": "CIH Bank",
+   "Contact": "Faycal Gouy (DGA Support)",
+   "Status": "Ready to contact",
+   "Recommended action": "LinkedIn intro to facilities lead: HQ fit-out pipeline + 13 new branches (2025)"
+  },
+  {
+   "Company": "TELUS Digital Morocco",
+   "Contact": "Yassine Benkirane",
+   "Status": "Ready to contact",
+   "Recommended action": "Email Country MD: 1,700-seat CFC office - largest single opportunity; draft #3 ready"
+  },
+  {
+   "Company": "Sofrecom Maroc",
+   "Contact": "TBD",
+   "Status": "Ready to contact",
+   "Recommended action": "400 new qualified jobs - workstation packages; identify HR/facilities contact"
+  },
+  {
+   "Company": "Salam Gaz",
+   "Contact": "TBD",
+   "Status": "Ready to contact",
+   "Recommended action": "New HQ finishing (MAD 120M) - fit-out timing is NOW; identify DG/secretariat"
+  },
+  {
+   "Company": "Benteler (Morocco)",
+   "Contact": "TBD",
+   "Status": "Ready to contact",
+   "Recommended action": "New Kenitra plant (300+ jobs) - office areas; identify plant admin contact"
+  },
+  {
+   "Company": "RMA Assurance",
+   "Contact": "TBD",
+   "Status": "Ready to contact",
+   "Recommended action": "New RMA Services center - agency fit-out; identify facilities contact"
+  },
+  {
+   "Company": "Magma Technology",
+   "Contact": "Mourad El Bidaoui",
+   "Status": "Ready to contact",
+   "Recommended action": "Founder-direct email; small-batch modular workstations"
+  },
+  {
+   "Company": "Al Barid Bank",
+   "Contact": "TBD",
+   "Status": "Monitor",
+   "Recommended action": "7 new branches - standardized branch furniture; national procurement"
+  },
+  {
+   "Company": "La Voie Express",
+   "Contact": "Munsef Belkhayat",
+   "Status": "Ready to contact",
+   "Recommended action": "CEO-direct: admin offices for Lakhyayta II Hub"
+  },
+  {
+   "Company": "SFC Automotive",
+   "Contact": "TBD",
+   "Status": "Monitor",
+   "Recommended action": "Tanger Med site opening - admin areas; approach at office-fit-out stage"
+  },
+  {
+   "Company": "Ryanair (Rabat base)",
+   "Contact": "TBD",
+   "Status": "Monitor",
+   "Recommended action": "Base offices at Rabat-Sale; contact once base is operational"
+  },
+  {
+   "Company": "Aage Hempel",
+   "Contact": "TBD",
+   "Status": "Monitor",
+   "Recommended action": "New Casablanca offices (Jan 2026) - may already be furnished; verify first"
+  },
+  {
+   "Company": "ORA Technologies",
+   "Contact": "TBD",
+   "Status": "Monitor",
+   "Recommended action": "$10M funding - watch for office expansion announcement"
+  },
+  {
+   "Company": "Agenz",
+   "Contact": "TBD",
+   "Status": "Monitor",
+   "Recommended action": "$5M seed - small; watch for hiring/office news"
+  },
+  {
+   "Company": "Management Solutions",
+   "Contact": "TBD",
+   "Status": "Verify first",
+   "Recommended action": "Confirm furnishing status before pitching (office may already be equipped)"
+  },
+  {
+   "Company": "LEAR Corporation (Tangier plant)",
+   "Contact": "Faical Derkaoui",
+   "Status": "Ready to contact",
+   "Recommended action": "Plant admin/office areas for 8,000 m2 extension; plant manager intro"
+  },
+  {
+   "Company": "Ingin Intelligent Morocco",
+   "Contact": "TBD",
+   "Status": "Monitor",
+   "Recommended action": "Construction phase; approach at fit-out stage (Q4 2026-Q2 2027)"
+  },
+  {
+   "Company": "Safran (Morocco operations)",
+   "Contact": "TBD",
+   "Status": "Monitor",
+   "Recommended action": "Track expansion details; site director intro once specifics known"
+  }
+ ]
+}

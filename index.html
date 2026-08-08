@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LOOPS — Moroccan Office-Furniture Lead Dashboard</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">⟳</span>
+    <div>
+      <h1>LOOPS <span class="brand-sub">Lead Operations</span></h1>
+      <p class="tagline">Moroccan companies with a reason to buy office furniture <strong>now</strong></p>
+    </div>
+  </div>
+  <nav class="nav">
+    <a href="#kpis">Overview</a>
+    <a href="#funnel">Funnel</a>
+    <a href="#top10">Top 10</a>
+    <a href="#leads">Ranked leads</a>
+    <a href="#signals">Signals</a>
+    <a href="#outreach">Outreach</a>
+  </nav>
+  <span class="updated" id="updated-label">–</span>
+</header>
+
+<main>
+  <section id="kpis" class="kpis">
+    <div class="kpi"><span class="kpi-label">Companies tracked</span><span class="kpi-value" id="k-companies">–</span><span class="kpi-note" id="k-watchlist">–</span></div>
+    <div class="kpi"><span class="kpi-label">Companies with real signals</span><span class="kpi-value" id="k-signal">–</span><span class="kpi-note">evidence-linked</span></div>
+    <div class="kpi"><span class="kpi-label">Ready to contact</span><span class="kpi-value" id="k-ready">–</span><span class="kpi-note" id="k-monitor">–</span></div>
+    <div class="kpi"><span class="kpi-label">Named decision makers</span><span class="kpi-value" id="k-named">–</span><span class="kpi-note">of 22 tracked</span></div>
+    <div class="kpi kpi-accent"><span class="kpi-label">Top lead score</span><span class="kpi-value" id="k-top">–</span><span class="kpi-note">out of 100</span></div>
+    <div class="kpi"><span class="kpi-label">Database average</span><span class="kpi-value" id="k-avg">–</span><span class="kpi-note" id="k-avg-note">–</span></div>
+  </section>
+
+  <section id="funnel">
+    <div class="section-head"><h2>Funnel</h2><p>Signal → Understanding → Opportunity → Lead → Outreach</p></div>
+    <div class="funnel" id="funnel"></div>
+  </section>
+
+  <section id="top10">
+    <div class="section-head"><h2>Top 10 opportunities</h2><p>Score = Relevance (35) + Magnitude (25) + Urgency (20) + Evidence (10) + Access (10)</p></div>
+    <div class="chart-wrap wide">
+      <svg id="stacked-chart" viewBox="0 0 900 420" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Top 10 lead scores"></svg>
+      <div class="legend" id="legend"></div>
+    </div>
+  </section>
+
+  <section id="leads" class="section-head">
+    <div class="section-head-row">
+      <h2>Ranked leads</h2>
+      <div class="toolbar">
+        <input id="search" type="search" placeholder="Search company, city, industry…">
+        <select id="sort">
+          <option value="score">Sort by score ↓</option>
+          <option value="urgency">Sort by urgency ↓</option>
+          <option value="name">Sort by name ↑</option>
+          <option value="city">Sort by city ↑</option>
+        </select>
+        <button class="chip active" data-watch="all">All</button>
+        <button class="chip" data-watch="active">With signal</button>
+        <button class="chip" data-watch="watch">Watchlist</button>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table id="leads-table">
+        <thead><tr>
+          <th>#</th><th>Company</th><th>City</th><th>Industry</th><th>Signal date</th>
+          <th>Why now</th><th class="num">Score</th><th>Opportunity</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="signals">
+    <div class="section-head"><h2>Signals</h2><p>Latest evidence per company — every signal is dated and sourced</p></div>
+    <div class="table-wrap">
+      <table id="signals-table">
+        <thead><tr><th>Company</th><th>Signal</th><th class="num">Date</th><th>Evidence</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="outreach">
+    <div class="section-head"><h2>Outreach pipeline</h2><p>Who to reach, how, and what to say</p></div>
+    <div class="split">
+      <div class="table-wrap">
+        <table id="outreach-table">
+          <thead><tr><th>Company</th><th>Contact</th><th>Status</th><th>Recommended action</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div class="contacts card">
+        <h3>Contacts found</h3>
+        <div id="contacts-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built from 5 evidence-linked CSV files · generated <span id="gen-date">–</span> · every signal sourced, nothing invented</p>
+  </footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
