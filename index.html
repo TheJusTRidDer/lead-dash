@@ -19,6 +19,7 @@
   </div>
   <nav class="nav">
     <a href="#kpis">Overview</a>
+    <a href="#viz">Pulse</a>
     <a href="#funnel">Funnel</a>
     <a href="#top10">Top 10</a>
     <a href="#leads">Ranked leads</a>
@@ -29,7 +30,7 @@
 </header>
 
 <main>
-  <section id="kpis" class="kpis">
+  <section id="kpis" class="kpis reveal">
     <div class="kpi"><span class="kpi-label">Companies tracked</span><span class="kpi-value" id="k-companies">–</span><span class="kpi-note" id="k-watchlist">–</span></div>
     <div class="kpi"><span class="kpi-label">Companies with real signals</span><span class="kpi-value" id="k-signal">–</span><span class="kpi-note">evidence-linked</span></div>
     <div class="kpi"><span class="kpi-label">Ready to contact</span><span class="kpi-value" id="k-ready">–</span><span class="kpi-note" id="k-monitor">–</span></div>
@@ -38,12 +39,25 @@
     <div class="kpi"><span class="kpi-label">Database average</span><span class="kpi-value" id="k-avg">–</span><span class="kpi-note" id="k-avg-note">–</span></div>
   </section>
 
-  <section id="funnel">
+  <section id="viz" class="reveal">
+    <div class="section-head">
+      <h2>Pulse — shapes drawn from the data</h2>
+      <p>Every ring and band computes live from the lead database · hover for exact numbers</p>
+    </div>
+    <div class="rings" id="rings" aria-label="Live data rings"></div>
+    <div class="bands card">
+      <h3>Score bands — all tracked companies</h3>
+      <div class="band-bar" id="band-bar"></div>
+      <div class="band-legend" id="band-legend"></div>
+    </div>
+  </section>
+
+  <section id="funnel" class="reveal">
     <div class="section-head"><h2>Funnel</h2><p>Signal → Understanding → Opportunity → Lead → Outreach</p></div>
     <div class="funnel" id="funnel"></div>
   </section>
 
-  <section id="top10">
+  <section id="top10" class="reveal">
     <div class="section-head"><h2>Top 10 opportunities</h2><p>Score = Relevance (35) + Magnitude (25) + Urgency (20) + Evidence (10) + Access (10)</p></div>
     <div class="chart-wrap wide">
       <svg id="stacked-chart" viewBox="0 0 900 420" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Top 10 lead scores"></svg>
@@ -51,7 +65,7 @@
     </div>
   </section>
 
-  <section id="leads" class="section-head">
+  <section id="leads" class="section-head reveal">
     <div class="section-head-row">
       <h2>Ranked leads</h2>
       <div class="toolbar">
@@ -78,7 +92,7 @@
     </div>
   </section>
 
-  <section id="signals">
+  <section id="signals" class="reveal">
     <div class="section-head"><h2>Signals</h2><p>Latest evidence per company — every signal is dated and sourced</p></div>
     <div class="table-wrap">
       <table id="signals-table">
@@ -88,7 +102,7 @@
     </div>
   </section>
 
-  <section id="outreach">
+  <section id="outreach" class="reveal">
     <div class="section-head"><h2>Outreach pipeline</h2><p>Who to reach, how, and what to say</p></div>
     <div class="split">
       <div class="table-wrap">

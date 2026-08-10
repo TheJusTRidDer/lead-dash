@@ -57,6 +57,52 @@ section { margin-top: 34px; }
 .section-head p { color: var(--muted); font-size: 12.5px; margin-top: 4px; }
 .section-head-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
 
+/* ---------- reveal on scroll ---------- */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.in { opacity: 1; transform: none; }
+
+/* ---------- pulse rings ---------- */
+.rings { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.ring {
+  position: relative; overflow: hidden; text-align: center;
+  background: linear-gradient(180deg, var(--panel), var(--panel-2));
+  border: 1px solid var(--line); border-radius: 14px; padding: 16px 12px 14px;
+}
+.ring::before {
+  content: ""; position: absolute; inset: -30%;
+  background: conic-gradient(from 0deg, rgba(47,168,181,.5), rgba(232,182,76,.28),
+    rgba(70,201,138,.4), rgba(29,143,160,.5), rgba(47,168,181,.5));
+  filter: blur(26px); opacity: .35;
+  animation: spin 26s linear infinite;
+  pointer-events: none;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.ring > * { position: relative; z-index: 1; }
+.ring svg { display: block; margin: 0 auto; width: 132px; height: 132px; }
+.ring .ring-track { stroke: var(--chip); }
+.ring-center { position: absolute; left: 50%; top: calc(50% - 2px); transform: translate(-50%, -46%); }
+.ring-center .big { display: block; font-size: 25px; font-weight: 800; letter-spacing: -.02em; line-height: 1.05; }
+.ring-center .sub {
+  display: block; margin-top: 2px; font-size: 9.5px; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--muted);
+}
+.ring-cap { margin-top: 13px; font-size: 12.5px; font-weight: 700; }
+.ring-note { margin-top: 4px; font-size: 10.5px; color: var(--muted); line-height: 1.45; }
+
+/* ---------- score bands ---------- */
+.bands { margin-top: 16px; padding: 18px; }
+.bands h3 { font-size: 13px; color: var(--teal); margin-bottom: 12px; }
+.band-bar {
+  display: flex; height: 20px; border-radius: 10px; overflow: hidden;
+  background: var(--panel-2); border: 1px solid var(--line);
+}
+.band-seg { width: 0; height: 100%; transition: width .9s cubic-bezier(.22,1,.36,1); }
+.band-seg span { display: none; }
+.in .band-seg { width: var(--w); }
+.band-legend { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 12px; }
+.band-legend span { display: flex; align-items: center; gap: 6px; font-size: 11.5px; color: var(--muted); }
+.band-legend i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+
 /* ---------- KPIs ---------- */
 .kpis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
 .card, .kpi {
@@ -75,7 +121,8 @@ section { margin-top: 34px; }
 .funnel .stage { display: grid; grid-template-columns: 220px 1fr 40px; align-items: center; gap: 14px; }
 .funnel .stage-name { color: var(--muted); font-size: 12.5px; text-align: right; font-weight: 600; }
 .funnel .bar-wrap { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; height: 26px; overflow: hidden; }
-.funnel .bar { height: 100%; border-radius: 7px; background: linear-gradient(90deg, #1d4872, #2fa8b5); transition: width .6s ease; display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; min-width: 4px; }
+.funnel .bar { height: 100%; border-radius: 7px; background: linear-gradient(90deg, #1d4872, #2fa8b5); width: 0; transition: width .9s cubic-bezier(.22,1,.36,1); display: flex; align-items: center; justify-content: flex-end; padding-right: 10px; min-width: 4px; }
+.funnel.in .bar { width: var(--w); }
 .funnel .stage:last-child .bar { background: linear-gradient(90deg, #0f3d4a, #11806f); }
 .funnel .bar.hot { background: linear-gradient(90deg, #b07c1e, #e8b64c); }
 .funnel .count { font-weight: 800; font-size: 15px; }
@@ -151,12 +198,14 @@ footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line);
 
 @media (max-width: 980px) {
   .kpis { grid-template-columns: repeat(3, 1fr); }
+  .rings { grid-template-columns: repeat(2, 1fr); }
   .split { grid-template-columns: 1fr; }
   .topbar { flex-wrap: wrap; }
   .brand { min-width: 0; }
 }
 @media (max-width: 620px) {
   .kpis { grid-template-columns: repeat(2, 1fr); }
+  .rings { grid-template-columns: 1fr; }
   .funnel .stage { grid-template-columns: 1fr 2fr 30px; }
   .funnel .stage-name { text-align: left; }
 }

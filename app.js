@@ -1,5 +1,6 @@
 ﻿(() => {
   let DATA = null;
+  let counted = false;
 
   const $ = (id) => document.getElementById(id);
 
@@ -19,18 +20,168 @@
 
   function metrics() {
     const m = DATA.metrics;
-    $("k-companies").textContent = m.companies;
     $("k-watchlist").textContent = m.watchlist + " on watchlist";
-    $("k-signal").textContent = m.with_signal;
-    $("k-ready").textContent = m.ready;
     $("k-monitor").textContent = m.monitor + " monitor · " + m.verify_first + " verify first";
-    $("k-named").textContent = m.named_contacts;
-    $("k-top").textContent = m.top_score;
-    $("k-avg").textContent = m.avg_score;
     $("k-avg-note").textContent = "across " + m.companies + " companies";
-    $("updated-label").textContent = "Data " + fmtDate(m.generated);
+    const days = Math.max(0, Math.round((Date.now() - new Date(m.generated + "T00:00:00")) / 864e5));
+    $("updated-label").textContent = "Data " + fmtDate(m.generated) + " · " + (days ? days + " days ago" : "today");
     $("gen-date").textContent = fmtDate(m.generated);
     document.title = "LOOPS — " + m.top_score + "/100 top lead";
+    if (!counted) {
+      counted = true;
+      countUpAll();
+    }
+  }
+
+  function countUp(el, target, dec) {
+    const t0 = performance.now(), dur = 950;
+    const tick = (t) => {
+      const p = Math.min((t - t0) / dur, 1);
+      el.textContent = (target * (1 - Math.pow(1 - p, 3))).toFixed(dec);
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }
+
+  function countUpAll() {
+    const m = DATA.metrics;
+    countUp($("k-companies"), m.companies, 0);
+    countUp($("k-signal"), m.with_signal, 0);
+    countUp($("k-ready"), m.ready, 0);
+    countUp($("k-named"), m.named_contacts, 0);
+    countUp($("k-top"), m.top_score, 0);
+    countUp($("k-avg"), m.avg_score, 1);
+  }
+
+  function pulse() {
+    const m = DATA.metrics;
+    const opps = DATA.opportunities;
+    const act = opps.filter((r) => !r.watchlist);
+    const gen = new Date(m.generated + "T00:00:00");
+    const DAY = 864e5;
+    const signals = DATA.signals.filter((s) => s.Date && s.Date.split("-").length === 3);
+    const undated = DATA.signals.length - signals.length;
+    const fresh = signals.filter((s) => (gen - new Date(s.Date + "T00:00:00")) / DAY <= 90).length;
+
+    const avg = (k) => Math.round(act.reduce((a, r) => a + r[k], 0) / act.length);
+    const pct = (n, d) => Math.round((n / (d || 1)) * 100);
+
+    const rings = [
+      {
+        centerBig: m.avg_score.toFixed(1), centerSub: "avg /100", caption: "Score DNA",
+        note: "average of " + SEGMENTS.length + " weighted components across " + act.length + " active leads",
+        segments: SEGMENTS.map((s) => ({ v: avg(s.key), color: s.color, label: s.label })),
+      },
+      {
+        centerBig: String(fresh), centerSub: "≤ 90d", caption: "Urgency wave",
+        note: fresh + " fresh signals of " + signals.length + " dated" + (undated ? " · " + undated + " undated" : "") + " — 3-month window",
+        progress: pct(fresh, signals.length), color: "#46c98a",
+      },
+      {
+        centerBig: pct(m.ready, m.with_signal) + "%", centerSub: "of signalled", caption: "Reach",
+        note: m.ready + " ready to contact of " + m.with_signal + " with real signals",
+        progress: pct(m.ready, m.with_signal), color: "#2fa8b5",
+      },
+      {
+        centerBig: pct(m.ready, m.companies) + "%", centerSub: "overall yield", caption: "Yield",
+        note: m.ready + " ready of " + m.companies + " tracked — " + m.watchlist + " on watchlist",
+        progress: pct(m.ready, m.companies), color: "#e8b64c",
+      },
+    ];
+
+    const el = $("rings");
+    el.innerHTML = "";
+    rings.forEach((r) => {
+      const ring = document.createElement("div");
+      ring.className = "ring";
+      ring.innerHTML = '<svg viewBox="0 0 100 100"></svg>' +
+        '<div class="ring-center"><span class="big"></span><span class="sub"></span></div>' +
+        '<div class="ring-cap"></div><div class="ring-note"></div>';
+      const svgEl = ring.querySelector("svg");
+      const R = 40, C = Math.PI * 2 * R;
+
+      if (r.segments) {
+        svgEl.innerHTML = '<g transform="rotate(-90 50 50)"></g>';
+        const g = svgEl.querySelector("g");
+        let cum = 0;
+        r.segments.forEach((s, i) => {
+          const len = Math.max(C * (s.v / 100) - C * 0.012, 1);
+          const c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+          c.setAttribute("cx", 50); c.setAttribute("cy", 50); c.setAttribute("r", R);
+          c.setAttribute("fill", "none"); c.setAttribute("stroke", s.color);
+          c.setAttribute("stroke-width", "11"); c.setAttribute("stroke-linecap", "butt");
+          c.setAttribute("stroke-dasharray", len + " " + (C - len));
+          c.setAttribute("stroke-dashoffset", -(cum + len));
+          c.style.transition = "stroke-dashoffset 1.1s cubic-bezier(.22,1,.36,1) " + (i * 90) + "ms";
+          const t = document.createElementNS("http://www.w3.org/2000/svg", "title");
+          t.textContent = s.label + ": " + s.v + "/100";
+          c.appendChild(t);
+          g.appendChild(c);
+          cum += len;
+        });
+        ring.querySelector(".big").textContent = r.centerBig;
+        ring.querySelector(".sub").textContent = r.centerSub;
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          g.querySelectorAll("circle").forEach((c) => {
+            const len = parseFloat(c.getAttribute("stroke-dasharray").split(" ")[0]);
+            c.setAttribute("stroke-dashoffset", parseFloat(c.getAttribute("stroke-dashoffset")) + len);
+          });
+        }));
+      } else {
+        const color = r.color || "#2fa8b5";
+        svgEl.innerHTML =
+          '<circle class="ring-track" cx="50" cy="50" r="' + R + '" fill="none" stroke-width="11"/>' +
+          '<circle class="arc-progress" cx="50" cy="50" r="' + R + '" fill="none" stroke="' + color + '" stroke-width="11" stroke-linecap="round" transform="rotate(-90 50 50)"/>';
+        const prog = svgEl.querySelector(".arc-progress");
+        const final = C * (1 - r.progress / 100);
+        prog.setAttribute("stroke-dasharray", C);
+        prog.setAttribute("stroke-dashoffset", C);
+        prog.style.transition = "stroke-dashoffset 1.2s cubic-bezier(.22,1,.36,1) .15s";
+        ring.querySelector(".big").textContent = r.centerBig;
+        ring.querySelector(".sub").textContent = r.centerSub;
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          prog.setAttribute("stroke-dashoffset", final);
+        }));
+      }
+      ring.querySelector(".ring-cap").textContent = r.caption;
+      ring.querySelector(".ring-note").textContent = r.note;
+      el.appendChild(ring);
+    });
+
+    const bands = [
+      { label: "80+ hot", color: "#e8b64c", n: opps.filter((r) => r.score >= 80).length },
+      { label: "66–79 strong", color: "#2fa8b5", n: opps.filter((r) => r.score >= 66 && r.score < 80).length },
+      { label: "50–65 warm", color: "#1d8fa0", n: opps.filter((r) => r.score >= 50 && r.score < 66).length },
+      { label: "< 50 cool", color: "#7c9093", n: opps.filter((r) => r.score < 50).length },
+    ];
+    const total = Math.max(opps.length, 1);
+    const bar = $("band-bar");
+    bar.innerHTML = "";
+    $("band-legend").innerHTML = "";
+    bands.forEach((b) => {
+      const seg = document.createElement("div");
+      seg.className = "band-seg";
+      seg.style.background = b.color;
+      seg.style.setProperty("--w", (b.n / total) * 100 + "%");
+      const t = document.createElement("span");
+      t.textContent = b.label + ": " + b.n + " leads";
+      seg.appendChild(t);
+      bar.appendChild(seg);
+      const it = document.createElement("span");
+      it.innerHTML = "<i style='background:" + b.color + "'></i>" + b.label + " · " + b.n + " of " + opps.length;
+      $("band-legend").appendChild(it);
+    });
+  }
+
+  function reveal() {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        e.target.classList.add("in");
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll("section.reveal").forEach((s) => io.observe(s));
   }
 
   function funnel() {
@@ -51,7 +202,7 @@
       row.className = "stage";
       row.innerHTML =
         '<div class="stage-name">' + s.label + "</div>" +
-        '<div class="bar-wrap"><div class="bar' + (s.hot ? " hot" : "") + '" style="width:' + pct + '%">' +
+        '<div class="bar-wrap"><div class="bar' + (s.hot ? " hot" : "") + '" style="--w:' + pct + '%">' +
         (pct > 14 ? '<span style="font-size:11px;font-weight:700;color:#eef">' + s.n + "</span>" : "") +
         "</div></div>" +
         '<div class="count">' + s.n + "</div>";
@@ -193,12 +344,14 @@
     .then((d) => {
       DATA = d;
       metrics();
+      pulse();
       funnel();
       stackedChart();
       leadsTable();
       signalsTable();
       outreachTable();
       contactsList();
+      reveal();
     })
     .catch((e) => {
       document.body.innerHTML = "<div style='padding:60px;text-align:center'><h2>Failed to load dashboard data</h2><p>" + e.message + "</p></div>";
